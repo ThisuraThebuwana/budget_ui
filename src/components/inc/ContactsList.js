@@ -29,21 +29,13 @@ const ContactList = () => {
                         <div class="row">
                             <div class="col-4">
                                 <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg" width={150} class="img-fluid" alt="..."></img>
-                                {/* <p>ssddsd</p> */}
                             </div>
                             <div class="col-8">
-                                {/* <div class="row"></div>
-                                <div class="row"></div>
-                                <div class="row"></div> */}
-                                <p>username : {contact.username}</p>
-                                <p>email : {contact.email}</p>
-                                <p>phone : {contact.phone}</p>
+                                <p>{contact.username}</p>
+                                <p>{contact.email}</p>
+                                <p>{contact.phone}</p>
                             </div>
                         </div>
-
-                        {/* <p>username : {contact.username}</p>
-                        <p>email : {contact.email}</p>
-                        <p>phone : {contact.phone}</p> */}
                     </div>
                 ))}
             </div>

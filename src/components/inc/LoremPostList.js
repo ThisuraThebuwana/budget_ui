@@ -26,7 +26,7 @@ const LoremPostList = () => {
             <div className='item-container'>
                 {posts.map((post) => (
                     <div className='card'>
-                        <img src={post.download_url} width={200} class="img-fluid" alt="..."></img>
+                        <img src={post.download_url} class="img-fluid" alt="..."></img>
                         {/* <p>Author : {post.author}</p>
                         <p>url : {post.download_url}</p> */}
                     </div>
