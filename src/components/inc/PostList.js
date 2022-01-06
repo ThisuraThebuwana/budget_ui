@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const PostList = () => {
     const [posts, setPosts] = useState([]);
-    const [path, setPath] = useState("");
 
     useEffect(() => {
         fetchPosts();

@@ -4,6 +4,8 @@ import axios from 'axios';
 function CreatePostForm() {
     const [title, setTitle] = useState(null);
     const [desc, setDesc] = useState(null);
+    const [isAlertOn, setIsAlertOn] = useState(false);
+
     const inputRef = useRef(null);
 
     const data = new FormData();
@@ -19,6 +21,7 @@ function CreatePostForm() {
 
         axios.post('http://localhost:9000/posts', data);
 
+        setIsAlertOn(true);
         setTitle("");
         setDesc("");
         inputRef.current.value = "";
@@ -61,6 +64,12 @@ function CreatePostForm() {
                             className={`btn btn-primary form-post-btn`}
                         >Post</button>
                     </div>
+                    {(isAlertOn) ?
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                             Successfully posted!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        : null}
                 </div>
             </div>
         </div>
