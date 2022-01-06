@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const PostList = () => {
     const [posts, setPosts] = useState([]);
+    const [path, setPath] = useState("");
 
     useEffect(() => {
         fetchPosts();
@@ -33,10 +34,22 @@ const PostList = () => {
                         <div class="row">
                             <div class="col-8">
                                 <button
-                                    // onClick={handleCreatePost}
+                                    onClick={async () => {
+                                        axios.delete(`http://localhost:9000/posts/${post._id}`)
+                                            .then((res) => {
+                                                fetchPosts();
+                                            })
+                                            .catch((err) => {
+                                                console.log(err);
+                                            });
+
+                                    }}
                                     className={`btn btn-primary`}
                                 >
-                                    <img src={require(`../images/icons/icons8-remove-50.png`)} width={20}></img>
+                                    <img
+                                        src={require(`../images/icons/icons8-remove-50.png`)}
+                                        width={20}
+                                    ></img>
                                 </button>
                             </div>
                             <div class="col-2">
