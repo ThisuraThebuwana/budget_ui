@@ -22,13 +22,11 @@ const LoremPostList = () => {
 
     return (
         <div>
-            <h3>Lorem Picsum Posts</h3>
+            <h4>Lorem Picsum Posts</h4>
             <div className='item-container'>
                 {posts.map((post) => (
-                    <div className='card'>
+                    <div className='card image-card'>
                         <img src={post.download_url} class="img-fluid" alt="..."></img>
-                        {/* <p>Author : {post.author}</p>
-                        <p>url : {post.download_url}</p> */}
                     </div>
                 ))}
             </div>

@@ -7,3 +7,70 @@
 .cardform {
   color: tomato;
 }
+
+.custLogo {
+  margin-right: 15em;
+}
+
+.btnArea {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-lbl {
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+.post-card {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.cust-navbar {
+  margin-bottom: 15px;
+  background-color: rgb(163, 158, 147) !important;
+}
+
+.form-card {
+  margin-bottom: 25px;
+}
+
+.contact-card {
+  margin-bottom: 10px;
+}
+
+.image-card {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.form-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.form-post-btn {
+  background-color: rgb(255, 145, 0) !important;
+  font-weight: 700 !important;
+  border: none !important;
+}
+
+body {
+  background-color: #ddd6bab2 !important; 
+}
+
+.post-btn {
+  border: none !important;
+  padding-top: 0px !important;
+}
+
+.post-dislike-btn {
+  background-color: rgb(255, 145, 0) !important;
+}
+
+.nav-links {
+  font-weight: 500;
+}

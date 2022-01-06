@@ -12,7 +12,6 @@ const ContactList = () => {
         axios
             .get('http://localhost:9000/contacts')
             .then((res) => {
-                console.log(res);
                 setContacts(res.data);
             })
             .catch((err) => {
@@ -22,10 +21,10 @@ const ContactList = () => {
 
     return (
         <div>
-            <h3>Contacts</h3>
+            <h4>Contacts</h4>
             <div className='item-container'>
                 {contacts.map((contact) => (
-                    <div className='card'>
+                    <div className='card contact-card'>
                         <div class="row">
                             <div class="col-4">
                                 <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg" width={150} class="img-fluid" alt="..."></img>

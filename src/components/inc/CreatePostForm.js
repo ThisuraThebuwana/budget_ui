@@ -8,9 +8,6 @@ function CreatePostForm() {
 
     const data = new FormData();
 
-    // const handleUpload = () => {
-    //     inputRef.current?.click();
-    // };
     const handleDisplayFileDetails = (event) => {
         data.append('file', event.target.files[0]);
     };
@@ -28,9 +25,9 @@ function CreatePostForm() {
     };
 
     return (
-        <div class="card shadow">
+        <div class="card shadow form-card">
             <div class="card-header">
-                New Post
+                <h5>New Post</h5>
             </div>
             <div class="card-body">
 
@@ -54,28 +51,16 @@ function CreatePostForm() {
                             onChange={e => setDesc(e.target.value)}
                         ></textarea>
                     </div>
-                    {/* <label className="mx-3">Select image</label>
-                    <input
-                        ref={inputRef}
-                        onChange={handleDisplayFileDetails}
-                        className="d-none"
-                        type="file"
-                    /> */}
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Select image</label>
                         <input ref={inputRef} class="form-control" type="file" id="formFile" onChange={handleDisplayFileDetails} />
                     </div>
-                    {/* <button
-                        onClick={handleUpload}
-                        className={`btn btn-outline-primary`}
-                    >
-                        Choose File
-                    </button> */}
-
-                    <button
-                        onClick={handleCreatePost}
-                        className={`btn btn-outline-primary`}
-                    >Post</button>
+                    <div className="form-btn">
+                        <button
+                            onClick={handleCreatePost}
+                            className={`btn btn-primary form-post-btn`}
+                        >Post</button>
+                    </div>
                 </div>
             </div>
         </div>
